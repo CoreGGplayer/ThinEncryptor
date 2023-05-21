@@ -1,6 +1,6 @@
 import random
 a=input("Lock Text:")
-add_list=["~","`","!","@","#","$","%","^","&","*","(",")","{","[","}","]","|"," ",":","'","<",">",",",".","?","/"]
+add_list=["~","`","!","@","#","$","%","^","&","*","(",")","{","[","}","]","|","\",":","'","<",">",",",".","?","/"," "]
 byte1=a.encode('utf-8')
 byte2=""
 byte3=""
@@ -18,6 +18,6 @@ for i in byte2:
     byte3+=i
     rdi=random.randint(0,8)
     for i in range(rdi):
-        rdi2=random.randint(0,25)
+        rdi2=random.randint(0,26)
         byte3+=add_list[rdi2]
 print(byte3)
