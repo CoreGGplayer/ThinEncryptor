@@ -1,23 +1,19 @@
 import random
-a=input("Lock Text:")
-add_list=["~","`","!","@","#","$","%","^","&","*","(",")","{","[","}","]","|"," ",":","'","<",">",",",".","?","/"]
-byte1=a.encode('utf-8')
-byte2=""
-byte3=""
-rdi=0
-rdi2=0
-r=0
-r2=0
+inputer=input("Encryptor Text:")
+string_list,byte1,byte2,byte3,result_list,random_num_1,random_num_2,temporary_var_1,temporary_var_2=["~","`","!","@","#","$","%","^","&","*","(",")","{","[","}","]","|"," ",":","","<",">",",",".","?","/"," "],inputer.encode(),"","",[],0,0,0,0
 for i in byte1:
-    try:
-        r=int(i)
-    except ValueError:
-        byte2+=i
-    byte2+=str(r)
-for i in byte2:
-    byte3+=i
-    rdi=random.randint(0,8)
-    for i in range(rdi):
-        rdi2=random.randint(0,25)
+    temporary_var_1=int(i)
+    byte2+=str(temporary_var_1)
+for i in range(len(byte2)):
+    for i in byte2:
+        random_num_1=random.randint(0,len(byte2))
+        for i in range(random_num_1):
+            random_num_2=random.randint(0,25)
+            byte3+=string_list[random_num_2]
+        byte3+=str(i)
+    result_list.append(byte3)
+    byte3=""
+for i in result_list:
+    print(i)
         byte3+=add_list[rdi2]
 print(byte3)
