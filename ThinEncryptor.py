@@ -15,5 +15,3 @@ for i in range(len(byte2)):
     byte3=""
 for i in result_list:
     print(i)
-        byte3+=add_list[rdi2]
-print(byte3)
